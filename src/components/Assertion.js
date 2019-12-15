@@ -1,17 +1,7 @@
 import React from 'react';
+import './Assertion.css';
 
-interface Props {
-  type: string;
-  name: string | number;
-  ok: boolean;
-  skip: boolean;
-  actual: string;
-  expected: string;
-  operator: string;
-  error: Error;
-}
-
-class Assertion extends React.Component<Props> {
+export class Assertion extends React.Component {
   renderError() {
     const { actual, name, expected, operator, error } = this.props;
     return (
@@ -41,9 +31,6 @@ class Assertion extends React.Component<Props> {
   }
 
   render() {
-    const { name } = this.props;
-    return <li key={name}>{this.renderIcon()}</li>;
+    return <li>{this.renderIcon()}</li>;
   }
 }
-
-export default Assertion;

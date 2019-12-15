@@ -1,4 +1,4 @@
-import tape from 'tape';
+import tape from 'tape-catch';
 
 const requires = {
   test: tape
@@ -12,16 +12,21 @@ const evaluate = source => {
 };
 
 export const testRunner = source => {
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     const results = [];
-    tape
-      .createStream({ objectMode: true })
-      .on('data', row => {
-        results.push(row);
-      })
-      .on('end', () => {
-        resolve(results);
-      });
-    evaluate(source);
+    try {
+      tape
+        .createStream({ objectMode: true })
+        .on('data', row => {
+          results.push(row);
+        })
+        .on('end', () => {
+          resolve(results);
+        });
+      evaluate(source);
+    } catch (e) {
+      console.log('error', e);
+      reject(e);
+    }
   });
 };
