@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './Assertion.css';
 
 export class Assertion extends React.Component {
@@ -15,7 +16,6 @@ export class Assertion extends React.Component {
       </div>
     );
   }
-
   renderIcon() {
     const { ok, skip, name, type } = this.props;
     if (type !== 'assert') {
@@ -29,7 +29,6 @@ export class Assertion extends React.Component {
     }
     return this.renderError();
   }
-
   render() {
     return <li>{this.renderIcon()}</li>;
   }

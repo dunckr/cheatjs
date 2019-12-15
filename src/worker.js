@@ -24,9 +24,8 @@ export const testRunner = source => {
           resolve(results);
         });
       evaluate(source);
-    } catch (e) {
-      console.log('error', e);
-      reject(e);
+    } catch (error) {
+      reject(error.toString());
     }
   });
 };

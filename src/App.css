@@ -1,0 +1,20 @@
+body {
+  background-color: #222222;
+  color: #f8f8f2;
+}
+
+.container {
+  font-family: Menlo, Consolas, Monaco, 'Lucida Console', 'Courier New',
+    monospace;
+  font-size: 14px;
+  hyphens: none;
+  tab-size: 2;
+  text-shadow: none;
+  white-space: pre-wrap;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
