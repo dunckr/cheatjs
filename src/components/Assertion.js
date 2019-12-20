@@ -17,16 +17,10 @@ export class Assertion extends React.Component {
     );
   }
   renderIcon() {
-    const { ok, skip, name, type } = this.props;
-    if (type !== 'assert') {
-      return <span className="title">{name}</span>;
-    }
-    if (skip) {
-      return <span className="skip">{','}</span>;
-    }
-    if (ok) {
-      return <span className="ok">{`✔ ${name}`}</span>;
-    }
+    const { ok, skip, type } = this.props;
+    if (type !== 'assert') return null;
+    if (skip) return <span className="skip">{','}</span>;
+    if (ok) return <span className="ok">{`✔`}</span>;
     return this.renderError();
   }
   render() {

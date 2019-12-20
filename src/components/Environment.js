@@ -5,13 +5,14 @@ import Worker from 'workerize-loader!../worker'; // eslint-disable-line import/n
 import { Assertion } from './Assertion';
 import { Editor } from './Editor';
 import { Errors } from './Errors';
+import './Environment.css';
 
 const RUN_TESTS_DELAY = 1000;
 
 export class Environment extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { logs: [], source: props.initialSource };
+    this.state = { logs: [], source: props.source.replace(/^\s+/g, '') };
     this.worker = new Worker();
     this.handleChange = this.handleChange.bind(this);
     this.runTests = debounce(this.runTests.bind(this), RUN_TESTS_DELAY);
@@ -47,9 +48,11 @@ export class Environment extends React.Component {
     );
   }
   render() {
+    const { title } = this.props;
     const { source } = this.state;
     return (
-      <div className="container">
+      <div className="environment">
+        <h1>{title}</h1>
         <Editor initialSource={source} onChange={this.handleChange} />
         {this.renderLogs()}
       </div>

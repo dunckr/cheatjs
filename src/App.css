@@ -1,9 +1,4 @@
-body {
-  background-color: #222222;
-  color: #f8f8f2;
-}
-
-.container {
+.wrapper {
   font-family: Menlo, Consolas, Monaco, 'Lucida Console', 'Courier New',
     monospace;
   font-size: 14px;
@@ -11,6 +6,9 @@ body {
   tab-size: 2;
   text-shadow: none;
   white-space: pre-wrap;
+
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 ul {

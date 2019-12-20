@@ -1,11 +1,12 @@
 pre {
+  background-color: #222222;
+  color: #f8f8f2;
   padding: 10px 0;
   margin: 0;
   outline: none;
   overflow: scroll;
   display: inline-block;
   width: 100%;
-  border-bottom: 1px #ccc solid;
 }
 
 .token.namespace {

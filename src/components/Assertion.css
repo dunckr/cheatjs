@@ -1,9 +1,10 @@
 li {
+  background-color: #75715e;
   padding-right: 10px;
 }
 
 .title {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .ok {
