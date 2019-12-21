@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "buble": "^0.19.8",
+    "expect": "^24.9.0",
     "lodash.debounce": "^4.0.8",
+    "mocha": "^6.2.2",
     "prismjs": "^1.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
