@@ -1,16 +1,31 @@
-import { mocha } from 'mocha';
-import * as expect from 'expect';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { Reporter } from './reporter';
+import { App } from './App';
 
-// mocha.setup({ ui: 'bdd' });
-mocha.setup({ ui: 'bdd', reporter: Reporter });
+// import * as expect from 'expect';
+// import { testRunner } from './testRunner';
+//
+// const code = () => {
+//   describe('test suite', function() {
+//     it('first', function() {
+//       expect(1).toEqual(1);
+//     });
+//     it('second', function() {
+//       expect(1).toEqual(1);
+//     });
+//   });
+// };
+//
+// const start = async () => {
+//   try {
+//     const output = await testRunner(code);
+//     console.log('success', output);
+//   } catch (e) {
+//     console.log('error', e);
+//   }
+// };
+//
+// start();
 
-describe('test suite', function() {
-  it('should work', function() {
-    expect(1).toEqual(2);
-  });
-});
-
-mocha.checkLeaks();
-mocha.run();
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -5,10 +5,13 @@ export const from = {
     'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from',
   support: 'https://caniuse.com/#feat=array-find',
   source: `
-test('Array.from', t => {
-  t.equal(Array.from('123'), [1, 2, 3], 'creates new Array');
-  t.equal(Array.from('123', x => Number(x) + 1), [2, 3, 4], 'creates new Array with map');
-  t.end();
+describe('Array.from', () => {
+  it('creates an array', () => {
+    expect(Array.from('123')).toEqual(['1', '2', '3']);
+  });
+  it('can be passed a map function', () => {
+    expect(Array.from([1, 2, 3], x => x + x)).toEqual([2, 4, 6]);
+  });
 });`
 };
 
