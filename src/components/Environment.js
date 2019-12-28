@@ -1,10 +1,10 @@
 import React from 'react';
 import debounce from 'lodash.debounce';
-import Worker from 'workerize-loader!../worker'; // eslint-disable-line import/no-webpack-loader-syntax
 
 import { Assertion } from './Assertion';
 import { Editor } from './Editor';
 import { Errors } from './Errors';
+import { testRunner } from '../testRunner';
 import './Environment.css';
 
 const RUN_TESTS_DELAY = 1000;
@@ -12,11 +12,11 @@ const RUN_TESTS_DELAY = 1000;
 export class Environment extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { logs: [], source: props.source.replace(/^\s+/g, '') };
-    this.worker = new Worker();
+    this.state = { results: [], source: props.source.replace(/^\s+/g, '') };
     this.handleChange = this.handleChange.bind(this);
     this.runTests = debounce(this.runTests.bind(this), RUN_TESTS_DELAY);
   }
+
   componentDidMount() {
     this.runTests();
   }
@@ -25,28 +25,31 @@ export class Environment extends React.Component {
     this.setState({ source });
     this.runTests();
   }
+
   async runTests() {
     const { source } = this.state;
     try {
-      const logs = await this.worker.testRunner(source);
-      this.setState({ logs, errors: undefined });
+      const results = await testRunner(source);
+      this.setState({ results, errors: undefined });
     } catch (errors) {
       this.setState({ errors });
     }
   }
-  renderLogs() {
-    const { logs, errors } = this.state;
+
+  renderResults() {
+    const { results, errors } = this.state;
     if (errors) {
       return <Errors errors={errors} />;
     }
     return (
       <ul>
-        {logs.map((v, k) => {
+        {results.map((v, k) => {
           return <Assertion key={k} {...v} />;
         })}
       </ul>
     );
   }
+
   render() {
     const { title } = this.props;
     const { source } = this.state;
@@ -54,7 +57,7 @@ export class Environment extends React.Component {
       <div className="environment">
         <h1>{title}</h1>
         <Editor initialSource={source} onChange={this.handleChange} />
-        {this.renderLogs()}
+        {this.renderResults()}
       </div>
     );
   }

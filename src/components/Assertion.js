@@ -4,25 +4,20 @@ import './Assertion.css';
 
 export class Assertion extends React.Component {
   renderError() {
-    const { actual, name, expected, operator, error } = this.props;
+    const { body } = this.props;
     return (
       <div className="error">
-        <div>{`✖ ${name}`}</div>
-        <div>-----------------</div>
-        <div>{`operator: ${operator}`}</div>
-        <div>{`expected: ${expected}`}</div>
-        <div>{`actual: ${actual}`}</div>
-        <div>{`stack: ${error.stack}`}</div>
+        <div>{`✖ ${body}`}</div>
       </div>
     );
   }
+
   renderIcon() {
-    const { ok, skip, type } = this.props;
-    if (type !== 'assert') return null;
-    if (skip) return <span className="skip">{','}</span>;
-    if (ok) return <span className="ok">{`✔`}</span>;
+    const { state } = this.props;
+    if (state !== 'failed') return <span className="ok">{`✔`}</span>;
     return this.renderError();
   }
+
   render() {
     return <li>{this.renderIcon()}</li>;
   }

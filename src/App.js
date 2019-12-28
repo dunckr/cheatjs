@@ -3,13 +3,14 @@ import React from 'react';
 import { Environment } from './components/Environment';
 import {
   from,
-  entries,
   every,
-  fill,
   filter,
   find,
-  findIndex,
-  flat
+  flat,
+  includes,
+  map,
+  reduce,
+  some
 } from './Array';
 import './App.css';
 
@@ -18,14 +19,15 @@ export class App extends React.Component {
     return (
       <div className="wrapper">
         <Environment {...from} />
-        <Environment {...entries} />
         <Environment {...every} />
-        <Environment {...fill} />
         <Environment {...filter} />
         <Environment {...find} />
-        <Environment {...findIndex} />
         <Environment {...flat} />
-        <Environment {...find} />
+        <Environment {...includes} />
+        <Environment {...includes} />
+        <Environment {...map} />
+        <Environment {...reduce} />
+        <Environment {...some} />
       </div>
     );
   }
