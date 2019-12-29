@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cheatjs.com/static/css/main.d0f6310e.chunk.css",
+    "main.js": "/cheatjs.com/static/js/main.598a7d82.chunk.js",
+    "main.js.map": "/cheatjs.com/static/js/main.598a7d82.chunk.js.map",
+    "runtime-main.js": "/cheatjs.com/static/js/runtime-main.ff375c1d.js",
+    "runtime-main.js.map": "/cheatjs.com/static/js/runtime-main.ff375c1d.js.map",
+    "static/js/2.aa4c957d.chunk.js": "/cheatjs.com/static/js/2.aa4c957d.chunk.js",
+    "static/js/2.aa4c957d.chunk.js.map": "/cheatjs.com/static/js/2.aa4c957d.chunk.js.map",
+    "index.html": "/cheatjs.com/index.html",
+    "precache-manifest.af79c841ab41f1082f9c7dd44e3cb3bc.js": "/cheatjs.com/precache-manifest.af79c841ab41f1082f9c7dd44e3cb3bc.js",
+    "service-worker.js": "/cheatjs.com/service-worker.js",
+    "static/css/main.d0f6310e.chunk.css.map": "/cheatjs.com/static/css/main.d0f6310e.chunk.css.map",
+    "static/js/2.aa4c957d.chunk.js.LICENSE": "/cheatjs.com/static/js/2.aa4c957d.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff375c1d.js",
+    "static/js/2.aa4c957d.chunk.js",
+    "static/css/main.d0f6310e.chunk.css",
+    "static/js/main.598a7d82.chunk.js"
+  ]
+}
