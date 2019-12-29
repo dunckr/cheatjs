@@ -67,7 +67,7 @@ export const flat = {
   source: `
 describe('Array.flat', () => {
   it('flattens nested arrays', () => {
-    expect([1, 2, [3]]).toEqual([1, 2, 3]);
+    expect([1, 2, [3]].flat()).toEqual([1, 2, 3]);
   });
 });`
 };
@@ -106,11 +106,11 @@ export const reduce = {
   source: `
 describe('Array.reduce', () => {
   it('applies a function against the accumulator for every element and reduces to a single value', () => {
-    expect([1, 2, 3].reduce(0, (acc, x) => acc + x)).toEqual(6);
+    expect([1, 2, 3].reduce((acc, x) => acc + x, 0)).toEqual(6);
   });
   describe('Array.reduceRight', () => {
     it('calls reduce calling the elements in right-to-left order', () => {
-      expect([1, 2, 3].reduce(0, (acc, x) => acc + x)).toEqual(6);
+      expect([1, 2, 3].reduce((acc, x) => acc + x, 0)).toEqual(6);
     });
   });
 });`

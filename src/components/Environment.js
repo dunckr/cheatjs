@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 import { Assertion } from './Assertion';
 import { Editor } from './Editor';
 import { Errors } from './Errors';
-import { testRunner } from '../testRunner';
+import { runTest, testRunner } from '../testRunner';
 import './Environment.css';
 
 const RUN_TESTS_DELAY = 1000;
@@ -29,7 +29,7 @@ export class Environment extends React.Component {
   async runTests() {
     const { source } = this.state;
     try {
-      const results = await testRunner(source);
+      const results = await runTest(source);
       this.setState({ results, errors: undefined });
     } catch (errors) {
       this.setState({ errors });
@@ -41,13 +41,16 @@ export class Environment extends React.Component {
     if (errors) {
       return <Errors errors={errors} />;
     }
-    return (
-      <ul>
-        {results.map((v, k) => {
-          return <Assertion key={k} {...v} />;
-        })}
-      </ul>
-    );
+    if (results.length) {
+      return (
+        <ul>
+          {results.map((v, k) => {
+            return <Assertion key={k} {...v} />;
+          })}
+        </ul>
+      );
+    }
+    return <li>***</li>;
   }
 
   render() {
