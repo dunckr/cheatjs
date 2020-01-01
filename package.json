@@ -26,7 +26,7 @@
     "gh-pages": "^2.1.1",
     "react-scripts": "3.3.0"
   },
-  "homepage": "https://dunckr.github.io/cheatjs.com",
+  "homepage": "https://cheatjs.com",
   "eslintConfig": {
     "extends": "react-app"
   },
