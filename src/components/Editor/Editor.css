@@ -5,7 +5,6 @@ pre {
   margin: 0;
   outline: none;
   overflow: scroll;
-  display: inline-block;
   width: 100%;
 }
 

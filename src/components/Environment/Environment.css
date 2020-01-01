@@ -1,0 +1,15 @@
+.environment {
+  margin: 20px 0;
+}
+
+.environment h1 {
+  font-size: 16px;
+}
+
+.results {
+  background-color: #75715e;
+}
+
+.results > * {
+  padding-left: 10px;
+}

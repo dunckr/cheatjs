@@ -11,8 +11,17 @@
   margin: 0 auto;
 }
 
+.title {
+  font-family: monospace;
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.footer {
+  float: right;
+  padding-bottom: 20px;
 }
