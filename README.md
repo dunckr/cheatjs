@@ -1,21 +1,20 @@
 # [cheatjs.com](https://cheatjs.com)
 
-Quick reference of JavaScript's primitives
+Quick reference of JavaScript's primitives using tests.
 
-## TODO
+## Development
 
-- have link to mdn docs
-- have filter by type
-- copy button
-- expand option
+### Run
 
-- simple UI:
+```shell script
+yarn start
+```
 
-[ search ][ editor ][ output ][ editor ][ output ]
+### Deploy
 
-Mobile
-[ search ][ editor ]
-[ output ] - have option to expand just show ticks crosses
+```shell script
+yarn deploy
+```
 
 ## Thanks
 
