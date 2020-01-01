@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Environment } from './components/Environment';
+import { Environment } from './components/Environment/Environment';
 import {
   from,
   every,
@@ -11,13 +11,14 @@ import {
   map,
   reduce,
   some
-} from './Array';
+} from './docs/Array';
 import './App.css';
 
 export class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
+        <h1 className="title">cheatjs.com</h1>
         <Environment {...from} />
         <Environment {...every} />
         <Environment {...filter} />
@@ -28,6 +29,12 @@ export class App extends React.Component {
         <Environment {...map} />
         <Environment {...reduce} />
         <Environment {...some} />
+        <div className="footer">
+          <p>
+            {'by '}
+            <a href="https://dunckr.com/">dunckr</a>
+          </p>
+        </div>
       </div>
     );
   }

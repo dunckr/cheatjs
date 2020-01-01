@@ -1,10 +1,11 @@
 import React from 'react';
 import debounce from 'lodash.debounce';
 
-import { Assertion } from './Assertion';
-import { Editor } from './Editor';
-import { Errors } from './Errors';
-import { runTest, testRunner } from '../testRunner';
+import { Assertion } from '../Assertion/Assertion';
+import { Editor } from '../Editor/Editor';
+import { Errors } from '../Errors/Errors';
+import { runTest } from '../../utils/testRunner';
+import { Pending } from '../Pending/Pending';
 import './Environment.css';
 
 const RUN_TESTS_DELAY = 1000;
@@ -50,7 +51,7 @@ export class Environment extends React.Component {
         </ul>
       );
     }
-    return <li>***</li>;
+    return <Pending />;
   }
 
   render() {
@@ -60,7 +61,7 @@ export class Environment extends React.Component {
       <div className="environment">
         <h1>{title}</h1>
         <Editor initialSource={source} onChange={this.handleChange} />
-        {this.renderResults()}
+        <div className="results">{this.renderResults()}</div>
       </div>
     );
   }

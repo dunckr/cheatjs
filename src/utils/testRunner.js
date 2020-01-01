@@ -36,12 +36,12 @@ const testRunner = source => {
     });
     const requireKeys = Object.keys(REQUIRES);
     const requireValues = requireKeys.map(key => REQUIRES[key]);
+    // eslint-disable-next-line no-new-func
     const fn = Function(...requireKeys, source);
     fn(...requireValues);
     mocha.run();
   });
 };
 
-export const runTest = async source => {
-  return await queue.add(async () => testRunner(source));
-};
+export const runTest = async source =>
+  await queue.add(async () => testRunner(source));
