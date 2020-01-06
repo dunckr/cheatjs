@@ -59,7 +59,9 @@ export class Environment extends React.Component {
     const { source } = this.state;
     return (
       <div className="environment">
-        <h1>{title}</h1>
+        <a id={title} href={`#${title}`}>
+          <h1>{title}</h1>
+        </a>
         <div class="links">
           <a href={documentation} target="_blank" rel="noopener noreferrer">
             Docs

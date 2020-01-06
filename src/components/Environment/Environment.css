@@ -9,6 +9,7 @@
 
 .links {
   display: inline;
+  float: right;
 }
 
 .links a {

@@ -3,7 +3,7 @@ export const from = {
   tags: ['array'],
   documentation:
     'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from',
-  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_find',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_from',
   source: `
 describe('Array.from', () => {
   it('creates an array', () => {
