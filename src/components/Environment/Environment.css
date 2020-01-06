@@ -4,6 +4,15 @@
 
 .environment h1 {
   font-size: 16px;
+  display: inline;
+}
+
+.links {
+  display: inline;
+}
+
+.links a {
+  padding-left: 10px;
 }
 
 .results {

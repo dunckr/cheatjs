@@ -6,12 +6,11 @@ import {
   every,
   filter,
   find,
-  flat,
   includes,
   map,
   reduce,
   some
-} from './docs/Array';
+} from './examples/Array';
 import './App.css';
 
 export class App extends React.Component {
@@ -19,11 +18,26 @@ export class App extends React.Component {
     return (
       <div className="wrapper">
         <h1 className="title">cheatjs.com</h1>
+        <div className="github">
+          <a
+            className="github-button"
+            href="https://github.com/dunckr"
+            aria-label="Follow @dunckr on GitHub"
+          >
+            Follow @dunckr
+          </a>
+          <a
+            className="github-button"
+            href="https://github.com/dunckr/cheatjs.com"
+            aria-label="Star dunckr/cheatjs.com on GitHub"
+          >
+            Star
+          </a>
+        </div>
         <Environment {...from} />
         <Environment {...every} />
         <Environment {...filter} />
         <Environment {...find} />
-        <Environment {...flat} />
         <Environment {...includes} />
         <Environment {...includes} />
         <Environment {...map} />

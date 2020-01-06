@@ -55,11 +55,19 @@ export class Environment extends React.Component {
   }
 
   render() {
-    const { title } = this.props;
+    const { title, documentation, support } = this.props;
     const { source } = this.state;
     return (
       <div className="environment">
         <h1>{title}</h1>
+        <div class="links">
+          <a href={documentation} target="_blank" rel="noopener noreferrer">
+            Docs
+          </a>
+          <a href={support} target="_blank" rel="noopener noreferrer">
+            Support
+          </a>
+        </div>
         <Editor initialSource={source} onChange={this.handleChange} />
         <div className="results">{this.renderResults()}</div>
       </div>

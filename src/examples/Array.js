@@ -3,7 +3,7 @@ export const from = {
   tags: ['array'],
   documentation:
     'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from',
-  support: 'https://caniuse.com/#feat=array-find',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_find',
   source: `
 describe('Array.from', () => {
   it('creates an array', () => {
@@ -18,8 +18,9 @@ describe('Array.from', () => {
 export const every = {
   title: 'Array.every',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_every',
   source: `
 describe('Array.every', () => {
   it('tests every element passes the function', () => {
@@ -31,8 +32,9 @@ describe('Array.every', () => {
 export const filter = {
   title: 'Array.filter',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_filter',
   source: `
 describe('Array.filter', () => {
   it('creates new array from elements which pass the function', () => {
@@ -44,8 +46,9 @@ describe('Array.filter', () => {
 export const find = {
   title: 'Array.find',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_find',
   source: `
 describe('Array.find', () => {
   it('returns the value of first element that passes the function', () => {
@@ -58,28 +61,15 @@ describe('Array.find', () => {
   });
 });`
 };
-
-export const flat = {
-  title: 'Array.flat',
-  tags: ['array'],
-  documentation: '',
-  support: '',
-  source: `
-describe('Array.flat', () => {
-  it('flattens nested arrays', () => {
-    expect([1, 2, [3]].flat()).toEqual([1, 2, 3]);
-  });
-});`
-};
-
 export const includes = {
   title: 'Array.includes',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_includes',
   source: `
 describe('Array.includes', () => {
-  it('tests if an array includes a value', () => {
+  it('tests an array includes a value', () => {
     expect([1, 2, 3, 4, 5].includes(3)).toEqual(true);
   });
 });`
@@ -88,8 +78,9 @@ describe('Array.includes', () => {
 export const map = {
   title: 'Array.map',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_map',
   source: `
 describe('Array.map', () => {
   it('creates a new array calling the function on every element', () => {
@@ -101,8 +92,9 @@ describe('Array.map', () => {
 export const reduce = {
   title: 'Array.reduce',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_reduce',
   source: `
 describe('Array.reduce', () => {
   it('applies a function against the accumulator for every element and reduces to a single value', () => {
@@ -119,8 +111,9 @@ describe('Array.reduce', () => {
 export const some = {
   title: 'Array.some',
   tags: ['array'],
-  documentation: '',
-  support: '',
+  documentation:
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some',
+  support: 'https://caniuse.com/#feat=mdn-javascript_builtins_array_some',
   source: `
 describe('Array.some', () => {
   it('tests at least one element passes the function', () => {

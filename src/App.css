@@ -6,13 +6,17 @@
   tab-size: 2;
   text-shadow: none;
   white-space: pre-wrap;
-
   max-width: 680px;
   margin: 0 auto;
 }
 
 .title {
   font-family: monospace;
+  display: inline;
+}
+
+.github {
+  float: right;
 }
 
 ul {
