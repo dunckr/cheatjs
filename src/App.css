@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   font-family: Menlo, Consolas, Monaco, 'Lucida Console', 'Courier New',
     monospace;
@@ -8,11 +13,25 @@
   white-space: pre-wrap;
   max-width: 680px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .title {
   font-family: monospace;
   display: inline;
+}
+
+.search {
+  padding: 10px 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 2px;
+  border: 1px #75715e solid;
+  color: #75715e;
 }
 
 .github {
