@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "test": "react-scripts test --verbose=false",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
@@ -24,7 +24,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "gh-pages": "^2.1.1",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "react-snap": "^1.23.0"
   },
   "homepage": "https://cheatjs.com",
   "eslintConfig": {

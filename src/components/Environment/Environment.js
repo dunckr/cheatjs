@@ -62,7 +62,7 @@ export class Environment extends React.Component {
         <a id={title} href={`#${title}`}>
           <h1>{title}</h1>
         </a>
-        <div class="links">
+        <div className="links">
           <a href={documentation} target="_blank" rel="noopener noreferrer">
             Docs
           </a>
