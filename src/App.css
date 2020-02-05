@@ -13,7 +13,7 @@ body {
   white-space: pre-wrap;
   max-width: 680px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .title {
