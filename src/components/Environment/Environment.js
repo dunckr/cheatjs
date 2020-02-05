@@ -40,7 +40,7 @@ export class Environment extends React.Component {
   renderResults() {
     const { results, errors } = this.state;
     if (errors) {
-      return <Errors errors={errors} />;
+      return <Errors message={errors} />;
     }
     if (results.length) {
       return (

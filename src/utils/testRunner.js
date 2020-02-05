@@ -19,8 +19,8 @@ const testRunner = source => {
         runner.on(CONSTANTS.EVENT_TEST_PASS, test => {
           results.push(test);
         });
-        runner.on(CONSTANTS.EVENT_TEST_FAIL, test => {
-          results.push(test);
+        runner.on(CONSTANTS.EVENT_TEST_FAIL, (test, error) => {
+          results.push({ ...test, error });
         });
         runner.on(CONSTANTS.EVENT_RUN_END, () => {
           resolve(results);

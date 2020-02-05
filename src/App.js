@@ -61,7 +61,7 @@ export class App extends React.Component {
             type="text"
             name="search"
             placeholder="Filter by method name:"
-            autoFocus="true"
+            autoFocus
             value={input}
             onChange={this.handleChange}
           />
