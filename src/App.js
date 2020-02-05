@@ -56,6 +56,10 @@ export class App extends React.Component {
             Star
           </a>
         </div>
+        <p className="hint">
+          <span className="hint-label">*Hint*</span>
+          Edit the examples and learn how to use the APIs
+        </p>
         <div className="search">
           <input
             type="text"
