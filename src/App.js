@@ -1,20 +1,15 @@
 import React from 'react';
-
-import { Environment } from './components/Environment/Environment';
-import {
-  from,
-  every,
-  filter,
-  find,
-  includes,
-  map,
-  reduce,
-  some
-} from './examples/Array';
-import './App.css';
 import fuzzysearch from 'fuzzysearch';
 
-const EXAMPLES = [from, every, filter, find, includes, map, reduce, some];
+import * as ArrayExamples from './examples/Array';
+import * as ObjectExamples from './examples/Object';
+import { Environment } from './components/Environment/Environment';
+import './App.css';
+
+const EXAMPLES = [
+  ...Object.values(ArrayExamples),
+  ...Object.values(ObjectExamples)
+];
 
 export class App extends React.Component {
   constructor(props) {
